@@ -7,3 +7,10 @@ sources:
       tables:
       
       - name: payment
+
+    - name: jaffle_shop
+      database: raw1
+      schema: jaffle_shop
+      tables:
+        - name: customers
+        - name: orders
