@@ -13,7 +13,7 @@ sources:
             count: 12
             period: hour
           error_after:
-            count: 2
+            count: 7
             period: day
         loaded_at_field: _etl_loaded_at
       tables:
