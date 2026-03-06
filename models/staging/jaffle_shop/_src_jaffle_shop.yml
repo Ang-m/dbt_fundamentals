@@ -1,0 +1,41 @@
+version: 2
+
+sources:
+    
+
+    - name: jaffle_shop
+      database: raw1
+      schema: jaffle_shop
+      description: A database of a postgres applicaction backend
+      config: 
+        freshness:
+          warn_after:
+            count: 12
+            period: hour
+          error_after:
+            count: 2
+            period: day
+        loaded_at_field: _etl_loaded_at
+      tables:
+        - name: customers
+          description: Raw data of customers
+          columns:
+            - name: id
+              description: primary key of customers table
+              data_tests:
+                - unique
+                - not_null
+                
+          config: 
+            freshness: null
+        - name: orders
+          description: Raw data of orders
+          columns:
+            - name: id
+              description: primary key of orders table
+              data_tests:
+                - unique
+                - not_null
+
+
+                
