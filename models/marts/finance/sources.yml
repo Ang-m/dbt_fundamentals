@@ -1,8 +1,0 @@
-version: 2
-
-sources:
-    - name: raw          # source name used in {{ source() }}
-      database:  raw1     # optional: database/catalog
-      schema: stripe     # schema in your warehouse
-      tables:
-        - name: payment
